@@ -14,10 +14,10 @@ export const lightTheme = createTheme({
   palette: {
     mode: "light",
     primary: {
-      main: "#1976d2",
+      main: "#dc004e",
     },
     secondary: {
-      main: "#dc004e",
+      main: "#1976d2",
     },
   },
 });
@@ -39,10 +39,10 @@ export const darkTheme = createTheme({
       paper: "#424242",
     },
     primary: {
-      main: "#1976d2",
+      main: "#dc004e",
     },
     secondary: {
-      main: "#dc004e",
+      main: "#1976d2",
     },
   },
 });
