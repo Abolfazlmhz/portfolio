@@ -1,0 +1,29 @@
+@font-face {
+  font-family: "Vazir";
+  src: url("./assets/fonts/Vazir.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Sahel";
+  src: url("./assets/fonts/Sahel.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Gandom";
+  src: url("./assets/fonts/Gandom.woff") format("woff");
+}
+
+body {
+  margin: 0;
+  font-family: "Vazir", "Gandom",sans-serif;
+  box-sizing: border-box;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Sahel", "Gandom",sans-serif;
+}
