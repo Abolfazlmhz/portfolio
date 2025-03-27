@@ -1,16 +1,16 @@
 @font-face {
   font-family: "Vazir";
-  src: url("./assets/fonts/Vazir.woff2") format("woff2");
+  src: url("../src/assets/fonts/Vazir.woff2") format("woff2");
 }
 
 @font-face {
   font-family: "Sahel";
-  src: url("./assets/fonts/Sahel.woff") format("woff");
+  src: url("../src/assets/fonts/Sahel.woff") format("woff");
 }
 
 @font-face {
   font-family: "Gandom";
-  src: url("./assets/fonts/Gandom.woff") format("woff");
+  src: url("../src/assets/fonts/Gandom.woff2") format("woff2");
 }
 
 body {
@@ -26,4 +26,13 @@ h4,
 h5,
 h6 {
   font-family: "Sahel", "Gandom",sans-serif;
+}
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
 }

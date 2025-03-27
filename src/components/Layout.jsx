@@ -1,35 +1,45 @@
-import React from "react";
+import React, { useState } from "react";
 import Grid from "@mui/material/Grid";
-
+import Sidebar from "./Sidebar";
+import Tabs from "./Tabs";
 function Layout() {
+  const [activeTab, setActiveTab] = useState(0);
+  const handleTabChange = (newTab) => {
+    setActiveTab(newTab);
+  };
   return (
-    <Grid container spacing={5} sx={{ height: "100vh"}}>
+    <Grid container spacing={0} sx={{ height: "100vh", overflowX: "hidden" }}>
       <Grid
-        xs={0}
-        sm={2}
-        md={3}
+        size={{
+          xs: 0,
+          sm: 2,
+          md: 3,
+        }}
         sx={{
-          bgcolor: "primary.main",
+          bgcolor: "background.paper",
           color: "white",
           display: { xs: "none", sm: "block" },
           p: 2,
           height: "100%",
+          overflowY: "auto",
         }}
       >
-        Sidebar Content
+        <Sidebar onTabChange={handleTabChange} />
       </Grid>
 
       <Grid
-        xs={12}
-        sm={10}
-        md={9}
+        size={{
+          xs: 12,
+          sm: 10,
+          md: 9,
+        }}
         sx={{
-          bgcolor: "background.paper",
+          bgcolor: "background.default",
           p: 2,
           height: "100%",
         }}
       >
-        Main Content
+        <Tabs activeTab={activeTab}/>
       </Grid>
     </Grid>
   );

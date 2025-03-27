@@ -3,7 +3,7 @@ import { createTheme } from "@mui/material/styles";
 export const lightTheme = createTheme({
   direction: "rtl",
   typography: {
-    fontFamily: '"Vazir", "Gandom", sans-serif',
+    fontFamily: "Vazir, Gandom, sans-serif",
     h1: { fontFamily: "Sahel, Gandom, sans-serif" },
     h2: { fontFamily: "Sahel, Gandom, sans-serif" },
     h3: { fontFamily: "Sahel, Gandom, sans-serif" },
@@ -13,6 +13,10 @@ export const lightTheme = createTheme({
   },
   palette: {
     mode: "light",
+    background: {
+      default: "#ffffff",
+      paper: "#f4e1e1",
+    },
     primary: {
       main: "#dc004e",
     },
@@ -24,7 +28,7 @@ export const lightTheme = createTheme({
 export const darkTheme = createTheme({
   direction: "rtl",
   typography: {
-    fontFamily: '"Vazir", "Gandom", sans-serif',
+    fontFamily: "Vazir, Gandom, sans-serif",
     h1: { fontFamily: "Sahel, Gandom, sans-serif" },
     h2: { fontFamily: "Sahel, Gandom, sans-serif" },
     h3: { fontFamily: "Sahel, Gandom, sans-serif" },
