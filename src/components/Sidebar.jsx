@@ -12,8 +12,9 @@ const Sidebar = ({ activeTab, onTabChange }) => {
         sx={{
           "& .MuiTab-root": {
             color: "primary.main",
+            fontSize: "16px",
+            m:.5,
           },
-          "& .MuiTabs-indicator": {},
           "& .MuiTab-root.Mui-selected": {
             color: "white",
             bgcolor: "primary.main",

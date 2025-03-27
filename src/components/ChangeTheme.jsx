@@ -15,9 +15,9 @@ function ChangeTheme() {
   return (
     <ThemeProvider theme={isDarkMode ? darkTheme : lightTheme}>
       <CssBaseline />
-      <Button variant="outlined" color="secondary" onClick={toggleTheme}>
+      {/* <Button variant="outlined" color="secondary" onClick={toggleTheme}>
         {isDarkMode ? "تم روز" : "تم شب"}
-      </Button>
+      </Button> */}
       <App />
     </ThemeProvider>
   );
