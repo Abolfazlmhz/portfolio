@@ -1,20 +1,14 @@
 import { Tab, Tabs, Box } from "@mui/material";
-import { useState } from "react";
-const Sidebar = ({ onTabChange }) => {
-  const [value, setValue] = useState(0);
-  const [isDrawerOpen, setDrawerOpen] = useState(false);
-
+const Sidebar = ({ activeTab, onTabChange }) => {
   const setTab = (event, value) => {
-    setValue(value);
     onTabChange(value);
-    setDrawerOpen(false);
   };
   return (
     <Box>
       <Tabs
         orientation="vertical"
         onChange={setTab}
-        value={value}
+        value={activeTab}
         sx={{
           "& .MuiTab-root": {
             color: "primary.main",

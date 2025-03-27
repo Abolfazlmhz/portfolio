@@ -1,6 +1,6 @@
 import TabPanel from "./TabPanel";
 import { motion } from "framer-motion";
-const Tabs = ({activeTab}) => {
+const TabPanels = ({activeTab}) => {
   return (
     <>
       <TabPanel value={activeTab} index={0}>
@@ -47,4 +47,4 @@ const Tabs = ({activeTab}) => {
   );
 };
 
-export default Tabs;
+export default TabPanels;

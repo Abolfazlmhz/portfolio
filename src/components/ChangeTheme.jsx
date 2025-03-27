@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { ThemeProvider } from "@mui/material/styles";
+import { Button } from "@mui/material";
 import CssBaseline from "@mui/material/CssBaseline";
 import { lightTheme, darkTheme } from "../theme";
 import App from "../App";
@@ -14,9 +15,9 @@ function ChangeTheme() {
   return (
     <ThemeProvider theme={isDarkMode ? darkTheme : lightTheme}>
       <CssBaseline />
-      {/* <Button variant="outlined" color="secondary" onClick={toggleTheme}>
+      <Button variant="outlined" color="secondary" onClick={toggleTheme}>
         {isDarkMode ? "تم روز" : "تم شب"}
-      </Button> */}
+      </Button>
       <App />
     </ThemeProvider>
   );
