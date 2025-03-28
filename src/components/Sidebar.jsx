@@ -12,7 +12,7 @@ const Sidebar = ({ activeTab, onTabChange }) => {
         variant="h1"
         sx={{
           textAlign: "center",
-          animation: "rotate 2s ease-in",
+          animation: "rotate .7s ease-in",
           my: 2,
           px: 2,
           fontWeight: "bolder",

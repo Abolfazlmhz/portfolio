@@ -1,5 +1,6 @@
-import { Typography, Box } from "@mui/material";
+import { Box } from "@mui/material";
 import heroImage from "../assets/photos/Home.png";
+import TypingText from "../components/helpers/TypingText";
 
 const Home = () => {
   return (
@@ -10,24 +11,27 @@ const Home = () => {
         justifyContent: "center",
         alignItems: "center",
         gap: "2rem",
-        height: "80vh",
-        backgroundImage: `url(${heroImage})`, 
-        backgroundSize: "cover", 
-              backgroundPosition: "center",
+        height: "100vh",
+        backgroundImage: `url(${heroImage})`,
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+        filter: "brightness(1.2)",
       }}
     >
-      <Typography
-        variant="h2"
-        sx={{ fontSize: "25px", fontWeight: "bolder", color: "primary.main" }}
-      >
-        سلام، من ابوالفضل هستم.
-      </Typography>
-      <Typography
-        variant="h3"
-        sx={{ fontSize: "25px", color: "secondary.main" }}
-      >
-        توسعه‌دهنده‌ی فرانت‌اند.
-      </Typography>
+      <TypingText
+        text="سلام، من ابوالفضل هستم."
+        speed={70}
+        fontSize="30px"
+        color="primary.main"
+      />
+
+      <TypingText
+        text="توسعه‌ دهنده‌ی فرانت‌اند"
+        speed={70}
+        fontSize="25px"
+        color="secondary.main"
+        delay={2000}
+      />
     </Box>
   );
 };

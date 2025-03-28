@@ -29,10 +29,7 @@ function Layout() {
           overflowY: "auto",
         }}
       >
-        <Sidebar
-          activeTab={activeTab}
-          onTabChange={handleTabChange}
-        />
+        <Sidebar activeTab={activeTab} onTabChange={handleTabChange} />
       </Grid>
 
       <Grid
@@ -44,6 +41,9 @@ function Layout() {
         sx={{
           bgcolor: "background.default",
           height: "100%",
+          "& .css-19kzrtu": {
+            p: 0,
+          },
         }}
       >
         {isSmallScreen ? (

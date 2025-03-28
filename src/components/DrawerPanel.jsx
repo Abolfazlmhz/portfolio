@@ -18,6 +18,7 @@ const DrawerPanel = ({setDrawerOpen, isDrawerOpen,activeTab,handleTabChange}) =>
           height: "50px",
           minWidth: "unset",
           boxShadow: 3,
+          zIndex: 10,
         }}
       >
         <MenuIcon />

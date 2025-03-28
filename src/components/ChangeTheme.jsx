@@ -4,11 +4,13 @@ import CssBaseline from "@mui/material/CssBaseline";
 import { lightTheme, darkTheme } from "../theme";
 import App from "../App";
 import { createContext } from "react";
-
+import { useMediaQuery } from "@mui/material";
 export const themeContext = createContext()
+
+
+
 function ChangeTheme() {
-  const [isDarkMode, setIsDarkMode] = useState(true);
-  
+  const [isDarkMode, setIsDarkMode] = useState(useMediaQuery("(prefers-color-scheme:dark)"));
   const toggleTheme = () => {
     setIsDarkMode((prevMode) => !prevMode);
   };
