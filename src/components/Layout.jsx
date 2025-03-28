@@ -13,7 +13,6 @@ function Layout() {
     setActiveTab(newTab);
     setDrawerOpen(false);
   };
-
   return (
     <Grid container sx={{ height: "100vh", overflowX: "hidden" }}>
       <Grid
@@ -30,7 +29,10 @@ function Layout() {
           overflowY: "auto",
         }}
       >
-        <Sidebar activeTab={activeTab} onTabChange={handleTabChange} />
+        <Sidebar
+          activeTab={activeTab}
+          onTabChange={handleTabChange}
+        />
       </Grid>
 
       <Grid

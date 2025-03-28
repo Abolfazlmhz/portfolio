@@ -3,7 +3,7 @@ import {
   Telegram,
   Instagram,
   GitHub,
-  Email,
+  MarkEmailUnreadOutlined,
   Brightness4,
   LightMode,
 } from "@mui/icons-material";
@@ -12,6 +12,46 @@ import { Box } from "@mui/system";
 import { useContext } from "react";
 const Social = () => {
   const { toggleTheme, isDarkMode } = useContext(themeContext);
+
+  const buttonStyle = {
+    bgcolor: "primary.main",
+    color: "white",
+    borderRadius: "50%",
+    width: "40px",
+    height: "40px",
+    boxShadow: 3,
+    "&:hover": {
+      transform: "scale(1.1)",
+      transition: "transform 0.3s ease-in-out",
+    },
+  };
+  const SocialLinks = [
+    {
+      title: "تلگرام",
+      href: "https://t.me/Abolfazlmhz",
+      color: "#0088CC",
+      icon: <Telegram />,
+    },
+    {
+      title: "اینستاگرام",
+      href: "https://instagram.com/Abolfazlmhz8",
+      color: "#E1306C",
+      icon: <Instagram />,
+    },
+    {
+      title: "گیت هاب",
+      href: "https://github.com/Abolfazlmhz",
+      color: "#333333",
+      icon: <GitHub />,
+    },
+    {
+      title: "ایمیل",
+      href: "mailto:Abolfazl.mohammadizadeh@gmail.com",
+      color: "#FBBC04",
+      icon: <MarkEmailUnreadOutlined />,
+    },
+  ];
+
   return (
     <Box
       sx={{
@@ -20,105 +60,34 @@ const Social = () => {
         flexWrap: "wrap",
         gap: 2,
         my: 3,
+        px: 2,
       }}
     >
-      <Tooltip title="تلگرام" arrow>
-        <IconButton
-          href="https://t.me/Abolfazlmhz"
-          target="_blank"
-          sx={{
-            bgcolor: "primary.main",
-            color: "white",
-            borderRadius: "50%",
-            width: "40px",
-            height: "40px",
-            boxShadow: 3,
-            "&:hover": {
-              bgcolor: "secondary.main",
-              transform: "scale(1.1)",
-              transition: "transform 0.3s ease-in-out",
-            },
-          }}
-        >
-          <Telegram />
-        </IconButton>
-      </Tooltip>
-      <Tooltip title="اینستاگرام" arrow>
-        <IconButton
-          href="https://instagram.com/Abolfazlmhz8"
-          target="_blank"
-          sx={{
-            bgcolor: "primary.main",
-            color: "white",
-            borderRadius: "50%",
-            width: "40px",
-            height: "40px",
-            boxShadow: 3,
-            "&:hover": {
-              bgcolor: "#E1306C",
-              transform: "scale(1.1)",
-              transition: "transform 0.3s ease-in-out",
-            },
-          }}
-        >
-          <Instagram />
-        </IconButton>
-      </Tooltip>
-      <Tooltip title="گیت هاب" arrow>
-        <IconButton
-          href="https://github.com/Abolfazlmhz"
-          target="_blank"
-          sx={{
-            bgcolor: "primary.main",
-            color: "white",
-            borderRadius: "50%",
-            width: "40px",
-            height: "40px",
-            boxShadow: 3,
-            "&:hover": {
-              bgcolor: "#333333",
-              transform: "scale(1.1)",
-              transition: "transform 0.3s ease-in-out",
-            },
-          }}
-        >
-          <GitHub />
-        </IconButton>
-      </Tooltip>
-      <Tooltip title="ایمیل" arrow>
-        <IconButton
-          href="mailto:Abolfazl.mohammadizadeh@gmail.com"
-          sx={{
-            bgcolor: "primary.main",
-            color: "white",
-            borderRadius: "50%",
-            width: "40px",
-            height: "40px",
-            boxShadow: 3,
-            "&:hover": {
-              bgcolor: "#D93025",
-              transform: "scale(1.1)",
-              transition: "transform 0.3s ease-in-out",
-            },
-          }}
-        >
-          <Email />
-        </IconButton>
-      </Tooltip>
+      {SocialLinks.map((social, index) => (
+        <Tooltip key={index} title={social.title} arrow>
+          <IconButton
+            href={social.href}
+            target="_blank"
+            sx={{
+              ...buttonStyle,
+              "&:hover": {
+                ...buttonStyle["&:hover"],
+                bgcolor: social.color,
+              },
+            }}
+          >
+            {social.icon}
+          </IconButton>
+        </Tooltip>
+      ))}
       <Tooltip title="تغییر تم" arrow>
         <IconButton
           onClick={toggleTheme}
           sx={{
-            bgcolor: "primary.main",
-            color: "white",
-            borderRadius: "50%",
-            width: "40px",
-            height: "40px",
-            boxShadow: 3,
+            ...buttonStyle,
             "&:hover": {
+              ...buttonStyle["&:hover"],
               bgcolor: "secondary.dark",
-              transform: "scale(1.1)",
-              transition: "transform 0.3s ease-in-out",
             },
           }}
         >

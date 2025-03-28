@@ -1,17 +1,23 @@
 import { Tab, Tabs, Box, Divider, Typography } from "@mui/material";
 import Social from "./Social";
+import { Home, Info, Build, ContactMail } from "@mui/icons-material";
+
 const Sidebar = ({ activeTab, onTabChange }) => {
   const setTab = (event, value) => {
     onTabChange(value);
   };
   return (
-    <Box>
+    <Box sx={{ bgcolor: "Background.paper" }}>
       <Typography
-        variant="h6"
+        variant="h1"
         sx={{
           textAlign: "center",
           my: 2,
+          px: 2,
+          fontWeight: "bolder",
+          fontSize: 24,
           lineHeight: 2,
+          color: "primary.main",
         }}
       >
         وبسایت شخصی
@@ -24,6 +30,10 @@ const Sidebar = ({ activeTab, onTabChange }) => {
         value={activeTab}
         sx={{
           "& .MuiTab-root": {
+            display: "flex",
+            flexDirection: "row-reverse",
+            gap: ".7rem",
+            alignItems: "center",
             color: "primary.main",
             fontSize: "16px",
             m: 0.5,
@@ -35,12 +45,18 @@ const Sidebar = ({ activeTab, onTabChange }) => {
             transform: "scale(1.1)",
             transition: "transform 0.5s ease-in-out",
           },
+          "& .MuiTab-iconWrapper": {
+            marginBottom: 0,
+          },
         }}
       >
-        <Tab label="صفحه اصلی" />
-        <Tab label="درباره من" />
-        <Tab label="پروژه ها" />
-        <Tab label="ارتباط با من" />
+        <Tab icon={<Home sx={{ fontSize: "18px" }} />} label="صفحه اصلی" />
+        <Tab icon={<Info sx={{ fontSize: "18px" }} />} label="درباره من" />
+        <Tab icon={<Build sx={{ fontSize: "18px" }} />} label="پروژه‌ها" />
+        <Tab
+          icon={<ContactMail sx={{ fontSize: "18px" }} />}
+          label="ارتباط با من"
+        />
       </Tabs>
       <Divider />
       <Social />
@@ -50,10 +66,11 @@ const Sidebar = ({ activeTab, onTabChange }) => {
         sx={{
           textAlign: "center",
           mt: "auto",
+          animation: "fade-in 2s forwards",
           p: 2,
           fontSize: "14px",
           color: "text.secondary",
-          direction:"ltr"
+          direction: "ltr",
         }}
       >
         Made with ❤️

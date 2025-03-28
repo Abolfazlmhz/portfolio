@@ -3,13 +3,7 @@ import { createTheme } from "@mui/material/styles";
 export const lightTheme = createTheme({
   direction: "rtl",
   typography: {
-    fontFamily: "Vazir, Gandom, sans-serif",
-    h1: { fontFamily: "Sahel, Gandom, sans-serif" },
-    h2: { fontFamily: "Sahel, Gandom, sans-serif" },
-    h3: { fontFamily: "Sahel, Gandom, sans-serif" },
-    h4: { fontFamily: "Sahel, Gandom, sans-serif" },
-    h5: { fontFamily: "Sahel, Gandom, sans-serif" },
-    h6: { fontFamily: "Sahel, Gandom, sans-serif" },
+    fontFamily: "Gandom,Sahel,Vazir sans-serif",
   },
   palette: {
     mode: "light",
@@ -18,35 +12,29 @@ export const lightTheme = createTheme({
       paper: "#f4e1e1",
     },
     primary: {
-      main: "#dc004e",
+      main: "#da0e56",
     },
     secondary: {
-      main: "#1976d2",
+      main: "#18b8d1",
     },
   },
 });
 export const darkTheme = createTheme({
   direction: "rtl",
   typography: {
-    fontFamily: "Vazir, Gandom, sans-serif",
-    h1: { fontFamily: "Sahel, Gandom, sans-serif" },
-    h2: { fontFamily: "Sahel, Gandom, sans-serif" },
-    h3: { fontFamily: "Sahel, Gandom, sans-serif" },
-    h4: { fontFamily: "Sahel, Gandom, sans-serif" },
-    h5: { fontFamily: "Sahel, Gandom, sans-serif" },
-    h6: { fontFamily: "Sahel, Gandom, sans-serif" },
+    fontFamily: " Gandom,Sahel,Vazir, sans-serif",
   },
   palette: {
     mode: "dark",
     background: {
       default: "#323232",
-      paper: "#424242",
+      paper: "#444545",
     },
     primary: {
-      main: "#dc004e",
+      main: "#18b8d1",
     },
     secondary: {
-      main: "#1976d2",
+      main: "#da0e56",
     },
   },
 });

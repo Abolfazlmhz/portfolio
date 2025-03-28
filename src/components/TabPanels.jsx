@@ -11,6 +11,7 @@ const TabPanels = ({activeTab}) => {
           transition={{ duration: 0.5 }}
         >
           <h2>صفحه اصلی</h2>
+          <p>صفحه اصلی</p>
         </motion.div>
       </TabPanel>
       <TabPanel value={activeTab} index={1}>
