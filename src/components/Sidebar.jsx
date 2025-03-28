@@ -12,6 +12,7 @@ const Sidebar = ({ activeTab, onTabChange }) => {
         variant="h1"
         sx={{
           textAlign: "center",
+          animation: "rotate 2s ease-in",
           my: 2,
           px: 2,
           fontWeight: "bolder",
@@ -46,7 +47,7 @@ const Sidebar = ({ activeTab, onTabChange }) => {
             transition: "transform 0.5s ease-in-out",
           },
           "& .MuiTab-iconWrapper": {
-            marginBottom: 0,
+            marginBottom: "0 !important",
           },
         }}
       >

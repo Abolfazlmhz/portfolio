@@ -1,5 +1,6 @@
 import TabPanel from "./TabPanel";
 import { motion } from "framer-motion";
+import Home from "../pages/Home";
 const TabPanels = ({activeTab}) => {
   return (
     <>
@@ -10,8 +11,7 @@ const TabPanels = ({activeTab}) => {
           exit={{ x: "100%", opacity: 0 }}
           transition={{ duration: 0.5 }}
         >
-          <h2>صفحه اصلی</h2>
-          <p>صفحه اصلی</p>
+          <Home />
         </motion.div>
       </TabPanel>
       <TabPanel value={activeTab} index={1}>
