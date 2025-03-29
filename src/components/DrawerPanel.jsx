@@ -8,7 +8,7 @@ const DrawerPanel = ({setDrawerOpen, isDrawerOpen,activeTab,handleTabChange}) =>
       <Button
         onClick={() => setDrawerOpen(true)}
         sx={{
-          position: "absolute",
+          position: "fixed",
           top: "10px",
           right: "10px",
           color: "primary.main",

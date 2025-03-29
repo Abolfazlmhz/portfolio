@@ -14,7 +14,7 @@ function Layout() {
     setDrawerOpen(false);
   };
   return (
-    <Grid container sx={{ height: "100vh", overflowX: "hidden" }}>
+    <Grid container sx={{ overflowX: "hidden", direction: "ltr" }}>
       <Grid
         size={{
           xs: 0,
@@ -23,9 +23,12 @@ function Layout() {
         }}
         sx={{
           bgcolor: "background.paper",
+          position: "fixed",
+          top: 0,
+          right: 0,
+          height: "100%",
           color: "white",
           display: { xs: "none", sm: "block" },
-          height: "100%",
           overflowY: "auto",
         }}
       >
@@ -39,8 +42,8 @@ function Layout() {
           md: 9,
         }}
         sx={{
+          direction: "rtl",
           bgcolor: "background.default",
-          height: "100%",
           "& .css-19kzrtu": {
             p: 0,
           },

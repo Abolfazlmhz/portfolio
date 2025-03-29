@@ -66,7 +66,6 @@ const Sidebar = ({ activeTab, onTabChange }) => {
         variant="body2"
         sx={{
           textAlign: "center",
-          mt: "auto",
           animation: "fade-in 2s forwards",
           p: 2,
           fontSize: "14px",

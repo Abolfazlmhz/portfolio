@@ -1,6 +1,6 @@
 import { Box } from "@mui/material";
 import heroImage from "../assets/photos/Home.png";
-import TypingText from "../components/helpers/TypingText";
+import TypingText from "../helpers/TypingText";
 
 const Home = () => {
   return (
@@ -26,7 +26,7 @@ const Home = () => {
       />
 
       <TypingText
-        text="توسعه‌ دهنده‌ی فرانت‌اند"
+        text="توسعه‌ دهنده‌ی فرانت‌ اند"
         speed={70}
         fontSize="25px"
         color="secondary.main"

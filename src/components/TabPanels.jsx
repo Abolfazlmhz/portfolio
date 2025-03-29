@@ -1,6 +1,7 @@
 import TabPanel from "./TabPanel";
 import { motion } from "framer-motion";
 import Home from "../pages/Home";
+import AboutMe from "../pages/AboutMe";
 const TabPanels = ({activeTab}) => {
   return (
     <>
@@ -21,7 +22,7 @@ const TabPanels = ({activeTab}) => {
           exit={{ x: "100%", opacity: 0 }}
           transition={{ duration: 0.5 }}
         >
-          <h2>درباره من</h2>
+          <AboutMe />
         </motion.div>
       </TabPanel>
       <TabPanel value={activeTab} index={2}>
