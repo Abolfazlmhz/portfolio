@@ -18,7 +18,7 @@ import {
 
 const MyTimeline = () => {
   return (
-    <Timeline position="alternate" sx={{ direction: "ltr",m:0,py:0 }}>
+    <Timeline position="alternate" sx={{ direction: "ltr", m: 0, py: 0 }}>
       <TimelineItem>
         <TimelineOppositeContent
           sx={{ m: "auto 0" }}
