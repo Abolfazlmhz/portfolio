@@ -71,7 +71,8 @@ const ContactMe = () => {
             href="mailto:Abolfazl.mohammadizadeh@gmail.com"
             sx={{
               fontWeight: "bold",
-              width: "45%",
+              width: "60%",
+              height: "3rem",
               "& .MuiButton-startIcon": {
                 margin: 0,
               },
@@ -86,7 +87,8 @@ const ContactMe = () => {
             target="_blank"
             sx={{
               fontWeight: "bold",
-              width: "45%",
+              width: "60%",
+              height: "3rem",
               "& .MuiButton-startIcon": {
                 margin: 0,
               },
@@ -101,7 +103,8 @@ const ContactMe = () => {
             target="_blank"
             sx={{
               fontWeight: "bold",
-              width: "45%",
+              width: "60%",
+              height: "3rem",
               "& .MuiButton-startIcon": {
                 margin: 0,
               },
