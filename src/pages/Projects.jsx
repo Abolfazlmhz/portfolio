@@ -12,8 +12,8 @@ import BookListLight from "../assets/photos/booklistlight.png";
 import BookListDark from "../assets/photos/booklistdark.png";
 import portfolioLight from "../assets/photos/portfoliolight.png";
 import portfolioDark from "../assets/photos/portfoliodark.png";
+import dooz from "../assets/photos/dooz.png";
 import React, { useState } from "react";
-
 
 import ProjectCard from "../helpers/ProjectCard";
 
@@ -31,6 +31,12 @@ const projectsArray = [
       "این پورتفولیو با هدف معرفی شخصی با استفاده از ری اکت و MUi در دو تم روشن و تاریک طراحی شده است. این پروژه دارای بخش های صفحه اصلی درباره من پروژه ها و ارتباط با من می باشد.",
     images: [portfolioLight, portfolioDark],
     github: "https://github.com/Abolfazlmhz/portfolio",
+  },
+  {
+    title: "دوز",
+    description: "یک پروژه ساده و ابتدایی با c++",
+    images: [dooz],
+    github: "https://github.com/Abolfazlmhz/cpp",
   },
 ];
 
@@ -62,7 +68,8 @@ const Projects = () => {
       <Box
         sx={{
           display: "flex",
-          gap: "2rem",
+          mt: "2rem",
+          gap: "3rem",
           flexWrap: "wrap",
           justifyContent: "center",
         }}

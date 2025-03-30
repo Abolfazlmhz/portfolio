@@ -3,6 +3,7 @@ import { motion } from "framer-motion";
 import Home from "../pages/Home";
 import AboutMe from "../pages/AboutMe";
 import Projects from "../pages/Projects";
+import ContactMe from "../pages/ContactMe";
 const TabPanels = ({activeTab}) => {
   return (
     <>
@@ -43,7 +44,7 @@ const TabPanels = ({activeTab}) => {
           exit={{ x: "100%", opacity: 0 }}
           transition={{ duration: 0.5 }}
         >
-          <h2>ارتباط با من</h2>
+          <ContactMe />
         </motion.div>
       </TabPanel>
     </>
