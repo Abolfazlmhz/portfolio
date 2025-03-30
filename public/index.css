@@ -15,7 +15,7 @@
 
 /* @font-face {
     font-family: "Gandom";
-    src: url("../src/assets/fonts/Gandom.woff2") format("woff2");
+    src: url() format("woff2");
     } */
 @import url('https://v1.fontapi.ir/css/Vazir');
 @import url('https://v1.fontapi.ir/css/Sahel');
@@ -23,7 +23,7 @@
 
 body {
   margin: 0;
-  font-family: "Gandom,Sahel,Vazir sans-serif";
+  font-family: "Sahel,Gandom,Vazir sans-serif";
   box-sizing: border-box;
 }
 
@@ -42,15 +42,16 @@ body {
     transform: translateY(0);
   }
 }
+
 @keyframes rotate {
   from {
     opacity: 0;
-    transform: scale(.8) ;
-    -webkit-transform: scale(.8) ;
-    -moz-transform: scale(.8) ;
-    -ms-transform: scale(.8) ;
-    -o-transform: scale(.8) ;
-}
+    transform: scale(.8);
+    -webkit-transform: scale(.8);
+    -moz-transform: scale(.8);
+    -ms-transform: scale(.8);
+    -o-transform: scale(.8);
+  }
 
   to {
     opacity: 1;
@@ -59,5 +60,5 @@ body {
     -moz-transform: scale(1);
     -ms-transform: scale(1);
     -o-transform: scale(1);
-}
+  }
 }

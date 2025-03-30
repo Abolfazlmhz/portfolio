@@ -2,6 +2,7 @@ import TabPanel from "./TabPanel";
 import { motion } from "framer-motion";
 import Home from "../pages/Home";
 import AboutMe from "../pages/AboutMe";
+import Projects from "../pages/Projects";
 const TabPanels = ({activeTab}) => {
   return (
     <>
@@ -32,7 +33,7 @@ const TabPanels = ({activeTab}) => {
           exit={{ x: "100%", opacity: 0 }}
           transition={{ duration: 0.5 }}
         >
-          <h2>پروژه‌ها</h2>
+          <Projects />
         </motion.div>
       </TabPanel>
       <TabPanel value={activeTab} index={3}>

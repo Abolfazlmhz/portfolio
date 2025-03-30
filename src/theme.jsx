@@ -3,7 +3,7 @@ import { createTheme } from "@mui/material/styles";
 export const lightTheme = createTheme({
   direction: "rtl",
   typography: {
-    fontFamily: "Gandom,Sahel,Vazir sans-serif",
+    fontFamily: "Sahel,Gandom,Vazir sans-serif",
   },
   palette: {
     mode: "light",
@@ -25,7 +25,7 @@ export const lightTheme = createTheme({
 export const darkTheme = createTheme({
   direction: "rtl",
   typography: {
-    fontFamily: " Gandom,Sahel,Vazir, sans-serif",
+    fontFamily: "Sahel,Gandom,Vazir, sans-serif",
   },
   palette: {
     mode: "dark",
