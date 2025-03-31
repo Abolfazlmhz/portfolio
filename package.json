@@ -18,7 +18,9 @@
     "react-dom": "^19.0.0",
     "react-scripts": "5.0.1",
     "swiper": "^11.2.6",
-    "web-vitals": "^2.1.4"
+    "web-vitals": "^2.1.4",
+    "homepage": "https://username.github.io/repository-name/"
+
   },
   "scripts": {
     "start": "react-scripts start",
