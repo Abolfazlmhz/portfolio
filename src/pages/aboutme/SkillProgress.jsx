@@ -59,17 +59,14 @@ const SkillProgress = () => {
               });
             }, speed);
           });
-
           return () => intervals.forEach((interval) => clearInterval(interval));
         }
       },
       { threshold: 0.2 }
     );
-
     if (containerRef.current) {
       observer.observe(containerRef.current);
     }
-
     return () => {
       if (containerRef.current) {
         observer.unobserve(containerRef.current);

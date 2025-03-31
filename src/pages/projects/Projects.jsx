@@ -8,14 +8,14 @@ import {
   DialogContent,
   DialogActions,
 } from "@mui/material";
-import BookListLight from "../assets/photos/booklistlight.png";
-import BookListDark from "../assets/photos/booklistdark.png";
-import portfolioLight from "../assets/photos/portfoliolight.png";
-import portfolioDark from "../assets/photos/portfoliodark.png";
-import dooz from "../assets/photos/dooz.png";
+import BookListLight from "../../assets/photos/booklistlight.png";
+import BookListDark from "../../assets/photos/booklistdark.png";
+import portfolioLight from "../../assets/photos/portfoliolight.png";
+import portfolioDark from "../../assets/photos/portfoliodark.png";
+import dooz from "../../assets/photos/dooz.png";
 import React, { useState } from "react";
 
-import ProjectCard from "../helpers/ProjectCard";
+import ProjectCard from "./ProjectCard";
 
 const projectsArray = [
   {

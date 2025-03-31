@@ -1,4 +1,4 @@
-import { themeContext } from "./ChangeTheme";
+import { themeContext } from "../ChangeTheme";
 import {
   Telegram,
   Instagram,

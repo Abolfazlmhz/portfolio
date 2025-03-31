@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import { Grid, useTheme, useMediaQuery } from "@mui/material";
-import Sidebar from "./Sidebar";
-import TabPanels from "./TabPanels";
-import DrawerPanel from "./DrawerPanel";
+import Sidebar from "./sidebar/Sidebar";
+import TabPanels from "./sidebar/TabPanels";
+import DrawerPanel from "./sidebar/DrawerPanel";
 
 function Layout() {
   const theme = useTheme();

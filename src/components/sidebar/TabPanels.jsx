@@ -1,10 +1,10 @@
 import TabPanel from "./TabPanel";
 import { motion } from "framer-motion";
-import Home from "../pages/Home";
-import AboutMe from "../pages/AboutMe";
-import Projects from "../pages/Projects";
-import ContactMe from "../pages/ContactMe";
-const TabPanels = ({activeTab}) => {
+import Home from "../../pages/home/Home";
+import AboutMe from "../../pages/aboutme/AboutMe";
+import Projects from "../../pages/projects/Projects";
+import ContactMe from "../../pages/ContactMe";
+const TabPanels = ({ activeTab }) => {
   return (
     <>
       <TabPanel value={activeTab} index={0}>

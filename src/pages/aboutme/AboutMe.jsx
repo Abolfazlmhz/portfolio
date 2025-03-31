@@ -1,7 +1,7 @@
 import { Box, Typography, Grid, Divider } from "@mui/material";
-import myphoto from "../assets/photos/myphoto.jpg";
-import MyTimeline from "../helpers/MyTimeLine";
-import SkillProgress from "../helpers/SkillProgress";
+import myphoto from "../../assets/photos/myphoto.jpg";
+import MyTimeline from "./MyTimeLine";
+import SkillProgress from "./SkillProgress";
 const AboutMe = () => {
   return (
     <Box sx={{ px: "2rem" }}>

@@ -1,6 +1,6 @@
 import { Box } from "@mui/material";
-import heroImage from "../assets/photos/Home.png";
-import TypingText from "../helpers/TypingText";
+import homeImage from "../../assets/photos/Home.png";
+import TypingText from "./TypingText";
 
 const Home = () => {
   return (
@@ -12,7 +12,7 @@ const Home = () => {
         alignItems: "center",
         gap: "2rem",
         height: "100vh",
-        backgroundImage: `url(${heroImage})`,
+        backgroundImage: `url(${homeImage})`,
         backgroundSize: "cover",
         backgroundPosition: "center",
         filter: "brightness(1.2)",
