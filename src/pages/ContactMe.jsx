@@ -8,9 +8,11 @@ import {
   Button,
   Divider,
 } from "@mui/material";
-import { GitHub, Email, Telegram } from "@mui/icons-material";
+import { GitHub, Email, Telegram, Instagram } from "@mui/icons-material";
+import { useTranslation } from "react-i18next";
 
 const ContactMe = () => {
+  const { t } = useTranslation();
   return (
     <Box sx={{ p: "2rem", textAlign: "center" }}>
       <Typography
@@ -21,7 +23,7 @@ const ContactMe = () => {
           fontSize: "35px",
         }}
       >
-        ارتباط با من
+        {t("contact.contactme")}
       </Typography>
       <Divider sx={{ my: "1rem" }} />
       <Card
@@ -42,7 +44,7 @@ const ContactMe = () => {
               mb: "1rem",
             }}
           >
-            آدرس‌های من
+            {t("contact.adress")}
           </Typography>
           <Typography
             variant="body1"
@@ -51,8 +53,7 @@ const ContactMe = () => {
               mb: "0.5rem",
             }}
           >
-            شما می‌توانید از طریق شبکه‌های اجتماعی یا ایمیل زیر با من تماس
-            بگیرید.
+            {t("contact.callme")}
           </Typography>
         </CardContent>
         <CardActions
@@ -67,7 +68,7 @@ const ContactMe = () => {
         >
           <Button
             variant="outlined"
-            startIcon={<Email sx={{ ml: 0.7 }} />}
+            startIcon={<Email sx={{ mx: 0.7 }} />}
             href="mailto:Abolfazl.mohammadizadeh@gmail.com"
             sx={{
               fontWeight: "bold",
@@ -78,11 +79,11 @@ const ContactMe = () => {
               },
             }}
           >
-            ارسال ایمیل
+            {t("contact.email")}
           </Button>
           <Button
             variant="outlined"
-            startIcon={<GitHub sx={{ ml: 0.7 }} />}
+            startIcon={<GitHub sx={{ mx: 0.7 }} />}
             href="https://github.com/Abolfazlmhz"
             target="_blank"
             sx={{
@@ -94,11 +95,11 @@ const ContactMe = () => {
               },
             }}
           >
-            گیت‌ هاب من
+            {t("contact.github")}
           </Button>
           <Button
             variant="outlined"
-            startIcon={<Telegram sx={{ ml: 0.7 }} />}
+            startIcon={<Telegram sx={{ mx: 0.7 }} />}
             href="https://t.me/Abolfazlmhz"
             target="_blank"
             sx={{
@@ -110,7 +111,23 @@ const ContactMe = () => {
               },
             }}
           >
-            تلگرام من
+            {t("contact.telegram")}
+          </Button>
+          <Button
+            variant="outlined"
+            startIcon={<Instagram sx={{ mx: 0.7 }} />}
+            href="https://t.me/Abolfazlmhz"
+            target="_blank"
+            sx={{
+              fontWeight: "bold",
+              width: "60%",
+              height: "3rem",
+              "& .MuiButton-startIcon": {
+                margin: 0,
+              },
+            }}
+          >
+            {t("contact.instagram")}
           </Button>
         </CardActions>
       </Card>

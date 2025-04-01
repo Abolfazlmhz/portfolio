@@ -3,8 +3,13 @@ import { Typography } from "@mui/material";
 
 const TypingText = ({ text, speed, fontSize, color, delay = 0 }) => {
   const [displayedText, setDisplayedText] = useState("");
+  const [typingTimer, setTypingTimer] = useState(null);
 
   useEffect(() => {
+    setDisplayedText("");
+    if (typingTimer) {
+      clearInterval(typingTimer);
+    }
     let i = 0;
     const timer = setTimeout(() => {
       const interval = setInterval(() => {
@@ -16,8 +21,12 @@ const TypingText = ({ text, speed, fontSize, color, delay = 0 }) => {
           clearInterval(interval);
         }
       }, speed);
+      setTypingTimer(interval);
     }, delay);
-    return () => clearTimeout(timer);
+    return () => {
+      clearTimeout(timer);
+      clearInterval(typingTimer);
+    };
   }, [text, speed, delay]);
 
   return (

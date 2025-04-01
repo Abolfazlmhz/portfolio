@@ -1,5 +1,7 @@
 import { Box, LinearProgress, Typography } from "@mui/material";
+import { useTranslation } from "react-i18next";
 const SkillItem = ({ skill, progress }) => {
+  const { i18n } = useTranslation();
   return (
     <Box
       sx={{
@@ -59,6 +61,7 @@ const SkillItem = ({ skill, progress }) => {
             height: 10,
             borderRadius: "10px",
             backgroundColor: "#e0e0e0",
+            transform: i18n.language === "en" ? "scaleX(-1)" : "scaleX(1)",
             "& .MuiLinearProgress-bar": {
               backgroundColor: `${skill.color}.main`,
             },

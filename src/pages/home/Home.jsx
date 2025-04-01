@@ -1,8 +1,10 @@
 import { Box } from "@mui/material";
 import homeImage from "../../assets/photos/Home.png";
 import TypingText from "./TypingText";
+import { useTranslation } from "react-i18next";
 
 const Home = () => {
+  const { t } = useTranslation();
   return (
     <Box
       sx={{
@@ -19,14 +21,14 @@ const Home = () => {
       }}
     >
       <TypingText
-        text="سلام، من ابوالفضل هستم."
+        text={t("home.home1")}
         speed={70}
         fontSize="30px"
         color="primary.main"
       />
 
       <TypingText
-        text="توسعه‌ دهنده‌ی فرانت‌ اند"
+        text={t("home.home2")}
         speed={70}
         fontSize="25px"
         color="secondary.main"

@@ -3,8 +3,10 @@ import { Grid, useTheme, useMediaQuery } from "@mui/material";
 import Sidebar from "./sidebar/Sidebar";
 import TabPanels from "./sidebar/TabPanels";
 import DrawerPanel from "./sidebar/DrawerPanel";
+import { useTranslation } from "react-i18next";
 
 function Layout() {
+  const { i18n } = useTranslation();
   const theme = useTheme();
   const isSmallScreen = useMediaQuery(theme.breakpoints.down("sm"));
   const [activeTab, setActiveTab] = useState(0);
@@ -14,7 +16,13 @@ function Layout() {
     setDrawerOpen(false);
   };
   return (
-    <Grid container sx={{ overflowX: "hidden", direction: "ltr" }}>
+    <Grid
+      container
+      dir={i18n.language === "fa" ? "ltr" : "rtl"}
+      sx={{
+        overflowX: "hidden",
+      }}
+    >
       <Grid
         size={{
           xs: 0,
@@ -25,7 +33,8 @@ function Layout() {
           bgcolor: "background.paper",
           position: "fixed",
           top: 0,
-          right: 0,
+          right: i18n.language === "fa" ? 0 : "auto",
+          left: i18n.language === "fa" ? "auto" : 0,
           height: "100%",
           color: "white",
           display: { xs: "none", sm: "block" },
@@ -41,8 +50,8 @@ function Layout() {
           sm: 8,
           md: 9,
         }}
+        dir={i18n.language === "fa" ? "rtl" : "ltr"}
         sx={{
-          direction: "rtl",
           bgcolor: "background.default",
           "& .css-19kzrtu": {
             p: 0,

@@ -7,8 +7,6 @@ import { createContext } from "react";
 import { useMediaQuery } from "@mui/material";
 export const themeContext = createContext()
 
-
-
 function ChangeTheme() {
   const [isDarkMode, setIsDarkMode] = useState(useMediaQuery("(prefers-color-scheme:dark)"));
   const toggleTheme = () => {

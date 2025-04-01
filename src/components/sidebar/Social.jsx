@@ -6,19 +6,26 @@ import {
   MarkEmailUnreadOutlined,
   Brightness4,
   LightMode,
+  Translate,
 } from "@mui/icons-material";
 import { IconButton, Tooltip } from "@mui/material";
 import { Box } from "@mui/system";
 import { useContext } from "react";
+import { useTranslation } from "react-i18next";
 const Social = () => {
   const { toggleTheme, isDarkMode } = useContext(themeContext);
+  const { i18n, t } = useTranslation();
+  const toggleLanguage = () => {
+    const newLang = i18n.language === "fa" ? "en" : "fa";
+    i18n.changeLanguage(newLang);
+  };
 
   const buttonStyle = {
     bgcolor: "primary.main",
     color: "white",
     borderRadius: "50%",
-    width: "40px",
-    height: "40px",
+    width: "42px",
+    height: "42px",
     boxShadow: 3,
     "&:hover": {
       transform: "scale(1.1)",
@@ -27,25 +34,25 @@ const Social = () => {
   };
   const SocialLinks = [
     {
-      title: "تلگرام",
+      title: t("contact.telegram"),
       href: "https://t.me/Abolfazlmhz",
       color: "#0088CC",
       icon: <Telegram />,
     },
     {
-      title: "اینستاگرام",
+      title: t("contact.instagram"),
       href: "https://instagram.com/Abolfazlmhz8",
       color: "#E1306C",
       icon: <Instagram />,
     },
     {
-      title: "گیت هاب",
+      title: t("contact.github"),
       href: "https://github.com/Abolfazlmhz",
       color: "#333333",
       icon: <GitHub />,
     },
     {
-      title: "ایمیل",
+      title: t("contact.email"),
       href: "mailto:Abolfazl.mohammadizadeh@gmail.com",
       color: "#FBBC04",
       icon: <MarkEmailUnreadOutlined />,
@@ -80,7 +87,7 @@ const Social = () => {
           </IconButton>
         </Tooltip>
       ))}
-      <Tooltip title="تغییر تم" arrow>
+      <Tooltip title={t("sidebar.theme")} arrow>
         <IconButton
           onClick={toggleTheme}
           sx={{
@@ -92,6 +99,20 @@ const Social = () => {
           }}
         >
           {isDarkMode ? <LightMode /> : <Brightness4 />}
+        </IconButton>
+      </Tooltip>
+      <Tooltip title={t("sidebar.lang")} arrow>
+        <IconButton
+          onClick={toggleLanguage}
+          sx={{
+            ...buttonStyle,
+            "&:hover": {
+              ...buttonStyle["&:hover"],
+              bgcolor: "secondary.dark",
+            },
+          }}
+        >
+          {<Translate />}
         </IconButton>
       </Tooltip>
     </Box>

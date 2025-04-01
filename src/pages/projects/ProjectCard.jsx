@@ -1,19 +1,20 @@
 import {
-    Card,
-    CardActionArea,
-    CardActions,
-    CardContent,
-    CardMedia,
-    Typography,
-    Button
-} from "@mui/material"
+  Card,
+  CardActionArea,
+  CardActions,
+  CardContent,
+  CardMedia,
+  Typography,
+  Button,
+} from "@mui/material";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Pagination,Autoplay } from "swiper/modules";
+import { Pagination, Autoplay } from "swiper/modules";
 import { GitHub } from "@mui/icons-material";
 import "swiper/css";
 import "swiper/css/pagination";
-
+import { useTranslation } from "react-i18next";
 const ProjectCard = ({ project, handleOpenDialog }) => {
+  const { t } = useTranslation();
   return (
     <Card
       sx={{
@@ -83,7 +84,7 @@ const ProjectCard = ({ project, handleOpenDialog }) => {
             sx={{ mt: "0.5rem", display: "block", mx: "auto" }}
             onClick={() => handleOpenDialog(project.description)}
           >
-            نمایش بیشتر
+            {t("projects.showmore")}
           </Button>
         </CardContent>
       </CardActionArea>
@@ -102,7 +103,7 @@ const ProjectCard = ({ project, handleOpenDialog }) => {
             },
           }}
         >
-          مشاهده در گیت هاب
+          {t("projects.showingithub")}
         </Button>
       </CardActions>
     </Card>

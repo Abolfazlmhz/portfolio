@@ -2,7 +2,9 @@ import { Box, Typography, Grid, Divider } from "@mui/material";
 import myphoto from "../../assets/photos/myphoto.jpg";
 import MyTimeline from "./MyTimeLine";
 import SkillProgress from "./SkillProgress";
+import { useTranslation } from "react-i18next";
 const AboutMe = () => {
+  const { t } = useTranslation(); 
   return (
     <Box sx={{ px: "2rem" }}>
       <Typography
@@ -15,7 +17,7 @@ const AboutMe = () => {
           my: "2rem",
         }}
       >
-        درباره‌ی من
+        {t("about_me.about_me_title")}
       </Typography>
       <Divider sx={{ my: "1rem" }} />
       <Typography
@@ -24,15 +26,7 @@ const AboutMe = () => {
           px: "2rem",
         }}
       >
-        سلام به صفحه شخصی من خوش اومدید! من ابوالفضل محمدی زاده هستم دانشجوی
-        مهندسی کامپیوتر دانشگاه تربیت دبیر شهید رجایی. متولد ۱۳۸۴ در شیراز هستم
-        و ساکن مرودشت در استان فارس هستم. بعد از گذراندن مراحل ابتدایی در سال
-        ۱۳۹۹ وارد دبیرستان شهید دستغیب مرودشت شدم و دوران کرونا و هم در این
-        مدرسه گذراندم پس از آنها و پایان کرونا به شکل جدی در مدرسه به بحث کنکور
-        پرداختم و در کنکور ۱۴۰۲ با رتبه ۲۱۷ منطقه در دانشگاه شهید رجایی پذیرفته
-        شدم. بعد از مدتی و پس از کمی آزمون و خطا و گذراندن دروس مقدماتی در سال
-        ۱۴۰۳ به شکل جدی یادگیری فرانت اند را شروع کردم و در حال حاضر در حال
-        تکمیل آموخته های خود در این عرصه می باشم.
+       {t("about_me.about_me_discribe")}
       </Typography>
       <Divider sx={{ my: "1rem" }} />
       <Grid
@@ -70,7 +64,7 @@ const AboutMe = () => {
           my: "1rem",
         }}
       >
-        مهارت ها
+        {t("about_me.skills")}
       </Typography>
       <SkillProgress />
       <Divider sx={{ my: "1rem" }} />

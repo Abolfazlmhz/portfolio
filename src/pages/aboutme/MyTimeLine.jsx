@@ -15,8 +15,10 @@ import {
   AutoStoriesOutlined,
   SquareFoot,
 } from "@mui/icons-material";
+import { useTranslation } from "react-i18next";
 
 const MyTimeline = () => {
+  const { t } = useTranslation();
   return (
     <Timeline position="alternate" sx={{ direction: "ltr", m: 0, py: 0 }}>
       <TimelineItem>
@@ -27,7 +29,7 @@ const MyTimeline = () => {
           color="text.secondary"
           dir="rtl"
         >
-          ۱۲ تا ۱۵ سالگی
+          {t("about_me.timeline.middle_school_age")}
         </TimelineOppositeContent>
         <TimelineSeparator>
           <TimelineConnector />
@@ -38,9 +40,9 @@ const MyTimeline = () => {
         </TimelineSeparator>
         <TimelineContent sx={{ py: "12px", px: 2 }}>
           <Typography variant="h6" component="span">
-            راهنمایی
+            {t("about_me.timeline.middle_school")}
           </Typography>
-          <Typography>مدرسه شهدای آزمایش مرودشت</Typography>
+          <Typography>{t("about_me.timeline.middle_school_name")}</Typography>
         </TimelineContent>
       </TimelineItem>
       <TimelineItem>
@@ -50,7 +52,7 @@ const MyTimeline = () => {
           color="text.secondary"
           dir="rtl"
         >
-          ۱۵ تا ۱۸ سالگی
+          {t("about_me.timeline.high_school_age")}
         </TimelineOppositeContent>
         <TimelineSeparator>
           <TimelineConnector />
@@ -61,9 +63,9 @@ const MyTimeline = () => {
         </TimelineSeparator>
         <TimelineContent sx={{ py: "12px", px: 2 }}>
           <Typography variant="h6" component="span">
-            دبیرستان
+            {t("about_me.timeline.high_school")}
           </Typography>
-          <Typography>دبیرستان شهید دستغیب مرودشت</Typography>
+          <Typography>{t("about_me.timeline.high_school_name")}</Typography>
         </TimelineContent>
       </TimelineItem>
       <TimelineItem>
@@ -73,7 +75,7 @@ const MyTimeline = () => {
           color="text.secondary"
           dir="rtl"
         >
-          ۱۸ سالگی تا کنون
+          {t("about_me.timeline.university_age")}
         </TimelineOppositeContent>
         <TimelineSeparator>
           <TimelineConnector />
@@ -84,9 +86,9 @@ const MyTimeline = () => {
         </TimelineSeparator>
         <TimelineContent sx={{ py: "12px", px: 2 }}>
           <Typography variant="h6" component="span">
-            دانشگاه
+            {t("about_me.timeline.university")}
           </Typography>
-          <Typography>دانشگاه تربیت دبیر شهید رجایی</Typography>
+          <Typography>{t("about_me.timeline.university_name")}</Typography>
         </TimelineContent>
       </TimelineItem>
       <TimelineItem>
@@ -96,7 +98,7 @@ const MyTimeline = () => {
           color="text.secondary"
           dir="rtl"
         >
-          از سال ۱۴۰۳
+          {t("about_me.timeline.programming_start")}
         </TimelineOppositeContent>
         <TimelineSeparator>
           <TimelineConnector sx={{ bgcolor: "secondary.main" }} />
@@ -107,9 +109,9 @@ const MyTimeline = () => {
         </TimelineSeparator>
         <TimelineContent sx={{ py: "12px", px: 2 }}>
           <Typography variant="h6" component="span">
-            برنامه نویسی
+            {t("about_me.timeline.programming")}
           </Typography>
-          <Typography>شروع جدی برنامه نویسی</Typography>
+          <Typography>{t("about_me.timeline.programming_desc")}</Typography>
         </TimelineContent>
       </TimelineItem>
     </Timeline>

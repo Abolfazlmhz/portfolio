@@ -14,33 +14,32 @@ import portfolioLight from "../../assets/photos/portfoliolight.png";
 import portfolioDark from "../../assets/photos/portfoliodark.png";
 import dooz from "../../assets/photos/dooz.png";
 import React, { useState } from "react";
-
 import ProjectCard from "./ProjectCard";
+import { useTranslation } from "react-i18next";
 
+const Projects = () => {
+  const { t } = useTranslation();
 const projectsArray = [
   {
-    title: "کتابخانه",
-    description:
-      "این کتابخانه با قابلیت افزودن، ویرایش و حذف کتاب و کار با سرور در دو تم روشن و تاریک با ری اکت ابتدایی طراحی شده است.",
+    title: t("projects.booklist"),
+    description: t("projects.booklistdiscribe"),
     images: [BookListLight, BookListDark],
     github: "https://github.com/Abolfazlmhz/BookList-bootstrap",
   },
   {
-    title: "پورتفولیو",
-    description:
-      "این پورتفولیو با هدف معرفی شخصی با استفاده از ری اکت و MUi در دو تم روشن و تاریک طراحی شده است. این پروژه دارای بخش های صفحه اصلی درباره من پروژه ها و ارتباط با من می باشد.",
+    title: t("projects.portfolio"),
+    description: t("projects.portfoliodescribe"),
     images: [portfolioLight, portfolioDark],
     github: "https://github.com/Abolfazlmhz/portfolio",
   },
   {
-    title: "دوز",
-    description: "یک پروژه ساده و ابتدایی با c++",
+    title: t("projects.dooz"),
+    description: t("projects.doozdescribe"),
     images: [dooz],
     github: "https://github.com/Abolfazlmhz/cpp",
   },
 ];
 
-const Projects = () => {
   const [openDialog, setOpenDialog] = useState(false);
   const [currentDescription, setCurrentDescription] = useState("");
   const handleOpenDialog = (description) => {
@@ -62,7 +61,7 @@ const Projects = () => {
           textAlign: "center",
         }}
       >
-        پروژه ها
+        {t("projects.projects")}
       </Typography>
       <Divider sx={{ my: "1rem" }} />
       <Box
@@ -88,7 +87,7 @@ const Projects = () => {
           color="primary"
           sx={{ textAlign: "center", fontWeight: "bold" }}
         >
-          توضیحات کامل
+          {t("projects.fulldescribtion")}
         </DialogTitle>
         <DialogContent>
           <Typography variant="body1" sx={{ color: "text.primary" }}>
@@ -97,7 +96,7 @@ const Projects = () => {
         </DialogContent>
         <DialogActions>
           <Button onClick={handleCloseDialog} color="primary">
-            بستن
+            {t("projects.close")}
           </Button>
         </DialogActions>
       </Dialog>

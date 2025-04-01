@@ -1,11 +1,13 @@
 import { Tab, Tabs, Box, Divider, Typography } from "@mui/material";
 import Social from "./Social";
 import { Home, Info, Build, ContactMail } from "@mui/icons-material";
+import { useTranslation } from "react-i18next";
 
 const Sidebar = ({ activeTab, onTabChange }) => {
   const setTab = (event, value) => {
     onTabChange(value);
   };
+  const { t } = useTranslation();
   return (
     <Box sx={{ bgcolor: "Background.paper" }}>
       <Typography
@@ -21,8 +23,8 @@ const Sidebar = ({ activeTab, onTabChange }) => {
           color: "primary.main",
         }}
       >
-        وبسایت شخصی
-        <br /> ابوالفضل محمدی زاده
+        {t("sidebar.web")}
+        <br /> {t("sidebar.myname")}
       </Typography>
       <Divider />
       <Tabs
@@ -51,12 +53,21 @@ const Sidebar = ({ activeTab, onTabChange }) => {
           },
         }}
       >
-        <Tab icon={<Home sx={{ fontSize: "18px" }} />} label="صفحه اصلی" />
-        <Tab icon={<Info sx={{ fontSize: "18px" }} />} label="درباره من" />
-        <Tab icon={<Build sx={{ fontSize: "18px" }} />} label="پروژه‌ها" />
+        <Tab
+          icon={<Home sx={{ fontSize: "18px" }} />}
+          label={t("home.mainpage")}
+        />
+        <Tab
+          icon={<Info sx={{ fontSize: "18px" }} />}
+          label={t("about_me.about_me_title")}
+        />
+        <Tab
+          icon={<Build sx={{ fontSize: "18px" }} />}
+          label={t("projects.projects")}
+        />
         <Tab
           icon={<ContactMail sx={{ fontSize: "18px" }} />}
-          label="ارتباط با من"
+          label={t("contact.contactme")}
         />
       </Tabs>
       <Divider />
