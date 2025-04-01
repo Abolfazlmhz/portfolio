@@ -13,10 +13,11 @@ import { Box } from "@mui/system";
 import { useContext } from "react";
 import { useTranslation } from "react-i18next";
 const Social = () => {
-  const { toggleTheme, isDarkMode } = useContext(themeContext);
+  const { toggleTheme, ThemeMode } = useContext(themeContext);
   const { i18n, t } = useTranslation();
   const toggleLanguage = () => {
     const newLang = i18n.language === "fa" ? "en" : "fa";
+    localStorage.setItem("language", newLang);
     i18n.changeLanguage(newLang);
   };
 
@@ -98,7 +99,7 @@ const Social = () => {
             },
           }}
         >
-          {isDarkMode ? <LightMode /> : <Brightness4 />}
+          {ThemeMode === "light" ? <LightMode /> : <Brightness4 />}
         </IconButton>
       </Tooltip>
       <Tooltip title={t("sidebar.lang")} arrow>

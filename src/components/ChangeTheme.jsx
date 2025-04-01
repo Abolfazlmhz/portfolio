@@ -5,17 +5,33 @@ import { lightTheme, darkTheme } from "./theme";
 import App from "../App";
 import { createContext } from "react";
 import { useMediaQuery } from "@mui/material";
-export const themeContext = createContext()
+import { useTranslation } from "react-i18next";
+import { useEffect } from "react";
+export const themeContext = createContext();
 
 function ChangeTheme() {
-  const [isDarkMode, setIsDarkMode] = useState(useMediaQuery("(prefers-color-scheme:dark)"));
+  const { i18n } = useTranslation();
+  const [themeMode, setThemeMode] = useState(null);
+  const userTheme = useMediaQuery("(prefers-color-scheme:dark)")
+    ? "dark"
+    : "light";
+
+  useEffect(() => {
+    const savedLanguage = localStorage.getItem("language");
+    i18n.changeLanguage(savedLanguage);
+    const savedTheme = localStorage.getItem("theme");
+    setThemeMode(savedTheme ? savedTheme : userTheme);
+  }, []);
+
   const toggleTheme = () => {
-    setIsDarkMode((prevMode) => !prevMode);
+    const newTheme = themeMode === "light" ? "dark" : "light";
+    setThemeMode(newTheme);
+    localStorage.setItem("theme", newTheme);
   };
-  
+
   return (
-    <ThemeProvider theme={isDarkMode ? darkTheme : lightTheme}>
-      <themeContext.Provider value={{toggleTheme, isDarkMode}}>
+    <ThemeProvider theme={themeMode === "dark" ? darkTheme : lightTheme}>
+      <themeContext.Provider value={{ toggleTheme, themeMode }}>
         <CssBaseline />
         <App />
       </themeContext.Provider>
