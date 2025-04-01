@@ -24,7 +24,7 @@ const skills = [
   },
   {
     name: "React",
-    level: 60,
+    level: 50,
     color: "info",
     icon: <Code sx={{ verticalAlign: "middle" }} />,
   },

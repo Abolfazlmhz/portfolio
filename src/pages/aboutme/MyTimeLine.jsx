@@ -27,7 +27,7 @@ const MyTimeline = () => {
           color="text.secondary"
           dir="rtl"
         >
-          12 تا 15 سالگی
+          ۱۲ تا ۱۵ سالگی
         </TimelineOppositeContent>
         <TimelineSeparator>
           <TimelineConnector />
@@ -50,7 +50,7 @@ const MyTimeline = () => {
           color="text.secondary"
           dir="rtl"
         >
-          15 تا 18 سالگی
+          ۱۵ تا ۱۸ سالگی
         </TimelineOppositeContent>
         <TimelineSeparator>
           <TimelineConnector />
@@ -73,7 +73,7 @@ const MyTimeline = () => {
           color="text.secondary"
           dir="rtl"
         >
-          18 سالگی تا کنون
+          ۱۸ سالگی تا کنون
         </TimelineOppositeContent>
         <TimelineSeparator>
           <TimelineConnector />
@@ -96,7 +96,7 @@ const MyTimeline = () => {
           color="text.secondary"
           dir="rtl"
         >
-          از سال 1403
+          از سال ۱۴۰۳
         </TimelineOppositeContent>
         <TimelineSeparator>
           <TimelineConnector sx={{ bgcolor: "secondary.main" }} />
