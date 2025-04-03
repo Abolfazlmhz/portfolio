@@ -109,4 +109,5 @@ const ProjectCard = ({ project, handleOpenDialog }) => {
     </Card>
   );
 };
+
 export default ProjectCard;

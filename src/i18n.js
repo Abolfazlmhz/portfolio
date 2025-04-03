@@ -40,7 +40,7 @@ const resources = {
         portfolio: "Portfolio",
         portfoliodescribe:
           "This portfolio is designed to showcase personal information using React and MUI, featuring both light and dark themes. The project includes sections for Home, About Me, Projects, and Contact Me.",
-        dooz: "DoozTic-tac-toe",
+        dooz: "Tic-tac-toe",
         doozdescribe: "A simple and basic C++ project",
         fulldescribtion: "Full description",
         close: "close",
