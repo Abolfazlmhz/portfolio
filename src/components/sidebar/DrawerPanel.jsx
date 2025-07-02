@@ -2,7 +2,12 @@ import MenuIcon from "@mui/icons-material/Menu";
 import { Button, Drawer } from "@mui/material";
 import Sidebar from "./Sidebar";
 import TabPanels from "./TabPanels";
-const DrawerPanel = ({setDrawerOpen, isDrawerOpen,activeTab,handleTabChange}) => {
+const DrawerPanel = ({
+  setDrawerOpen,
+  isDrawerOpen,
+  activeTab,
+  handleTabChange,
+}) => {
   return (
     <>
       <Button

@@ -93,7 +93,7 @@ const ProjectCard = ({ project, handleOpenDialog }) => {
           size="small"
           color="primary"
           href={project.github}
-          startIcon={<GitHub sx={{ ml: 0.7 }} />}
+          startIcon={<GitHub sx={{ ml: 0.7, mr: 0.7 }} />}
           target="_blank"
           sx={{
             margin: "0 auto",

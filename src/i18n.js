@@ -42,6 +42,9 @@ const resources = {
           "This portfolio is designed to showcase personal information using React and MUI, featuring both light and dark themes. The project includes sections for Home, About Me, Projects, and Contact Me.",
         dooz: "Tic-tac-toe",
         doozdescribe: "A simple and basic C++ project",
+        quiz: "Quiz",
+        quizdescribe:
+          "My first next.js project with the concept of user and test",
         fulldescribtion: "Full description",
         close: "close",
       },
@@ -101,6 +104,8 @@ const resources = {
           "این پورتفولیو با هدف معرفی شخصی با استفاده از ری اکت و MUi در دو تم روشن و تاریک طراحی شده است. این پروژه دارای بخش های صفحه اصلی درباره من پروژه ها و ارتباط با من می باشد.",
         dooz: "دوز",
         doozdescribe: "یک پروژه ساده و ابتدایی با c++",
+        quiz: "آزمون",
+        quizdescribe: "اولین پروژه نکست بنده با مفهوم کاربر و تست",
         fulldescribtion: "توضیحات کامل",
         close: "بستن",
       },

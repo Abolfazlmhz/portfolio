@@ -12,6 +12,8 @@ import BookListLight from "../../assets/photos/booklistlight.png";
 import BookListDark from "../../assets/photos/booklistdark.png";
 import portfolioLight from "../../assets/photos/portfoliolight.png";
 import portfolioDark from "../../assets/photos/portfoliodark.png";
+import quizdark from "../../assets/photos/quizdark.png";
+import quizlight from "../../assets/photos/quizlight.png";
 import dooz from "../../assets/photos/dooz.png";
 import React, { useState } from "react";
 import ProjectCard from "./ProjectCard";
@@ -19,26 +21,32 @@ import { useTranslation } from "react-i18next";
 
 const Projects = () => {
   const { t } = useTranslation();
-const projectsArray = [
-  {
-    title: t("projects.booklist"),
-    description: t("projects.booklistdiscribe"),
-    images: [BookListLight, BookListDark],
-    github: "https://github.com/Abolfazlmhz/BookList-bootstrap",
-  },
-  {
-    title: t("projects.portfolio"),
-    description: t("projects.portfoliodescribe"),
-    images: [portfolioLight, portfolioDark],
-    github: "https://github.com/Abolfazlmhz/portfolio",
-  },
-  {
-    title: t("projects.dooz"),
-    description: t("projects.doozdescribe"),
-    images: [dooz],
-    github: "https://github.com/Abolfazlmhz/cpp",
-  },
-];
+  const projectsArray = [
+    {
+      title: t("projects.booklist"),
+      description: t("projects.booklistdiscribe"),
+      images: [BookListLight, BookListDark],
+      github: "https://github.com/Abolfazlmhz/BookList-bootstrap",
+    },
+    {
+      title: t("projects.portfolio"),
+      description: t("projects.portfoliodescribe"),
+      images: [portfolioLight, portfolioDark],
+      github: "https://github.com/Abolfazlmhz/portfolio",
+    },
+    {
+      title: t("projects.dooz"),
+      description: t("projects.doozdescribe"),
+      images: [dooz],
+      github: "https://github.com/Abolfazlmhz/cpp",
+    },
+    {
+      title: t("projects.quiz"),
+      description: t("projects.quizdescribe"),
+      images: [quizlight, quizdark],
+      github: "https://github.com/Abolfazlmhz/quiz-app",
+    },
+  ];
 
   const [openDialog, setOpenDialog] = useState(false);
   const [currentDescription, setCurrentDescription] = useState("");
